@@ -2,10 +2,76 @@
 
 *{ box-sizing: border-box }
 
-img {
-   width: 100%;
-   display: block;
+@mixin defaultWidth {
+  width: 100%;
 }
 
-#app-container{
+
+.logo {
+
+  width: 90%;
+}
+
+body {
+  font-family: sans;
+  padding: 13px;
+}
+
+h1 {
+  font-family: Helvetica;
+  color: green;
+
+}
+
+.bio {
+  font-family: serif;
+  font-size: 11px;
+  text-align: justify;
+}
+
+
+.perfil {
+  @include defaultWidth();
+  margin: 0 auto;
+
+}
+
+.photo {
+
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: 1px dotted gray;
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+
+.perfil {
+  @include defaultWidth();
+  margin: 0 auto;
+}
+  .photo {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+img {
+  width: 350px;
+}
+
+  .photo {
+  width: 33%;
+
+  }
 }
